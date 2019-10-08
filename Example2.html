@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Personal Scripture</title>
+    <script>
+        //input a name and output a personalized scripture verse
+        function applyScripture() {
+            let name = document.getElementById("nameInputBox").value;
+            let scripture = "I would desire that ye, " + name +
+                ", should consider on the blessed and happy state of those that keep the commandments of God." +
+                " For behold, they are blessed in all things, both temporal and spiritual;" +
+                " and if they hold out faithful to the end thay are received into heaven," +
+                " that thereby they may dwell with God in a state of never-ending happiness." +
+                " O remember, remember that these things are true; for the Lord God hath spoken it.";
+
+            document.getElementById('outputDiv').innerHTML = scripture;
+
+        }
+    </script>
+</head>
+
+<body>
+    Please enter your name: <input type="text" id="nameInputBox">
+    <button type="button" onclick=applyScripture()>New Verse</button>
+    <div id="outputDiv"></div>
+</body>
+
+</html>
