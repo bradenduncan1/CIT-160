@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Miles Per Gallon</title>
+    <script>
+        function Conversion() {
+            //input starting miles, ending miles, and gas used
+            let startMpg = document.getElementById('start-miles').value;
+            let endMpg = document.getElementById('end-miles').value;
+            let gasUsed = document.getElementById('gas-used').value;
+            //calculate mpg
+            mpg = (endMpg - startMpg)/ gasUsed;
+            //output liters for viewer
+            outRef = document.getElementById("output").innerHTML = mpg + " mpg";
+        }
+    </script>
+</head>
+
+<body>
+    <p>Starting miles
+        <input type="text" size="5" id="start-miles">
+        Ending miles <input type="text" size="5" id="end-miles">
+        Gallons of gas used <input type="text" size="5" id="gas-used">
+        <button type="button" onclick="Conversion()">Run it</button>
+    </p>
+    <div id="output">
+    </div>
+</body>
+
+</html>
