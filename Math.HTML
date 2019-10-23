@@ -5,32 +5,46 @@
     <meta charset="utf-8">
     <title>Learning Math</title>
     <script>
-        function math() {
-            let inputRef = document.GetElementById("input1");
-            let input2Ref = document.GetElementById('input2');
-            let operator = document.GetElementById("operator").value;
-            let input3Ref = document.GetElementById('ans');
-            let outRef = document.GetElementById('output');
-            var a = parseFloat(inputRef.value);
-           var b = parseFloat(input2Ref.value);
-           var c = parseFloat(input3Ref.value);
-            let answer = a + "operator" + b
-            if (answer == c) {
-                outRef.innerHTML = "Correct! Good job!"
-            } else {
-                outRef.innerHTML = "Incorrect! Try again!"
+            /* retrieve numbers and operator
+           input: numbers 1, 2, operand, and 3
+           processing: the equation
+           output: the message of correct or incorrect */
+            function math() {
+            const input1 = parseInt(document.getElementById("number1").value);
+            const input2 = parseInt(document.getElementById("number2").value);
+            const operator = document.getElementById("operand").value;
+            const input3 = parseInt(document.getElementById("ans").value);
+            //use inputs to calculate answer
+            //determine which operator to use
+            let answer;
+            let response;
+            switch (operator) {
+            case "+": answer = input1 + input2;
+            break;
+            case "-": answer = input1 - input2;
+            break;
+            case "*": answer = input1 * input2;
+            break;
+            case "/": answer = input1 / input2;
+            break;
             }
+            if (input3 === answer) {
+                response = "Correct! Good job!";
+            } else {
+                response = "Incorrect! Try again!";
+            }
+            document.getElementById("outputDiv").innerHTML = response;
         }
     </script>
 </head>
 
 <body>
-    <input type="text" id="input1" size="5">
-    <input type="text" id="operator" size="5">
-    <input type="text" id="input2" size="5">
+    <input type="text" id="number1" size="5">
+    <input type="" id="operand" size="5">
+    <input type="text" id="number2" size="5">
     = <input type="text" id="ans" size="5"></br>
-    <button type="button" onclick=math()>Check it</button>
-    <div id="output"></div>
+    <button type="button" onclick="math()">Check it</button>
+    <div id="outputDiv"></div>
 </body>
 
 </html>
