@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Weather and Shoes</title>
+    <script>
+        function shoePredictor() {
+            let weather = document.getElementById("weather").value;
+            let outRef = document.getElementById("output");
+            if (weather == "hot") {
+                outRef.innerHTML = "sandals"
+            } else if (weather == "rain") {
+                outRef.innerHTML = "galoshes"
+            } else if (weather == "snow") {
+                outRef.innerHTML = "boots"
+            } else {
+                outRef.innerHTML = "shoes"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    Weather is: <input type="text" id="weather" size="5"></br>
+    What shoes will you wear?
+    <button type="button" onclick=shoePredictor()>Let's see!</button>
+
+    <div id="output"></div>
+</body>
+
+</html>
