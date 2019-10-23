@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Learning Math</title>
+    <script>
+        function math() {
+            let inputRef = document.GetElementById("input1");
+            let input2Ref = document.GetElementById('input2');
+            let operator = document.GetElementById("operator").value;
+            let input3Ref = document.GetElementById('ans');
+            let outRef = document.GetElementById('output');
+            var a = inputRef.value;
+           var b = input2Ref.value;
+           var c = input3Ref.value;
+            switch (operator) {
+                case '+': c = a + b; break;
+                case '-': c = a - b; break;
+                case '*': c = a * b; break;
+                case '/': c = a / b; break;
+            }
+            let answer = a + operator + b
+            if (answer == c) {
+                outRef.innerHTML = "Correct! Good job!"
+            } else {
+                outRef.innerHTML = "Incorrect! Try again!"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="input1" size="5">
+    <input type="text" id="operator" size="5">
+    <input type="text" id="input2" size="5">
+    = <input type="text" id="ans" size="5"></br>
+    <button type="button" onclick=math()>Check it</button>
+    <div id="output"></div>
+</body>
+
+</html>
