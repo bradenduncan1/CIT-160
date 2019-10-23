@@ -11,16 +11,10 @@
             let operator = document.GetElementById("operator").value;
             let input3Ref = document.GetElementById('ans');
             let outRef = document.GetElementById('output');
-            var a = inputRef.value;
-           var b = input2Ref.value;
-           var c = input3Ref.value;
-            switch (operator) {
-                case '+': c = a + b; break;
-                case '-': c = a - b; break;
-                case '*': c = a * b; break;
-                case '/': c = a / b; break;
-            }
-            let answer = a + operator + b
+            var a = parseFloat(inputRef.value);
+           var b = parseFloat(input2Ref.value);
+           var c = parseFloat(input3Ref.value);
+            let answer = a + "operator" + b
             if (answer == c) {
                 outRef.innerHTML = "Correct! Good job!"
             } else {
