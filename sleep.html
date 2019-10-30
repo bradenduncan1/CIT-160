@@ -1,0 +1,44 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Sleeping In</title>
+    <script>
+        /*input: get day of the week, date, and month from computer
+        processing: determine what day it is and if it's a holiday or weekend
+        output: let user know if they can sleep in or not :) */
+        function alarmClock() {
+            var now = new Date();
+            var month = now.getMonth();
+            var dayOfMonth = now.getDate();
+            var dayOfWeek = now.getDay();
+
+            let alarm;
+            if (month == 0 && dayOfMonth == 1) {
+                alarm = "Sleep in."
+            } else if (month == 6 && dayOfMonth == 4) {
+                alarm = "Sleep in."
+            } else if (month == 11 && dayOfMonth == 25) {
+                alarm = "Sleep in."
+            }
+            else if (dayOfWeek == 1 || dayOfWeek == 2 || dayOfWeek == 3 ||
+                dayOfWeek == 4 || dayOfWeek == 5) {
+                alarm = "Get up!"
+            } else {
+                alarm = "Sleep in."
+            }
+            document.getElementById('outputDiv').innerHTML = alarm;
+        }
+    </script>
+</head>
+
+<body>
+    <p>
+        Can you sleep in?
+        <button type="button" onclick="alarmClock()">Please?</button>
+    </p>
+    <div id='outputDiv'></div>
+</body>
+
+</html>
