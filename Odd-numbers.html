@@ -1,0 +1,35 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Odd Numbers</title>
+    <script>
+        /* input: integer received from user
+        process: determine all odd numbers inbetween 1 and integer
+        find sum of all odd numbers
+        output: give the user the sum */
+        function oddNumbers() {
+        let number = parseInt(document.getElementById("inp").value);
+        let outRef = document.getElementById('output');
+        let sum = 0;
+        var i;
+        for(var i=0; i <= number; i++) {
+            if(i % 2 == 1) {
+                sum = i + sum;
+            }
+            outRef.innerHTML = sum;
+        }
+        }
+    </script>
+</head>
+
+<body>
+    <p>
+        Pick a number: <input type="text" id="inp" size="5">
+        <button type="button" onclick="oddNumbers()" size="5">Let's go!</button>
+    </p>
+    <div id="output"></div>
+</body>
+
+</html>
