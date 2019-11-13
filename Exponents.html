@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exponents</title>
+    <script>
+        /*input a number to be multiplied by powers up to 31
+            process: multiply the number that was input by powers ranging form 0-31
+            output: all the products of the number input raised to the powers up to 31
+            */
+        function exponents() {
+            var input = document.getElementById('inp').value;
+            var powers;
+            var outRef = document.getElementById('output');
+            let i;
+            for (let i = 0; i <= 31; i++) {
+                powers = input ** i;
+                outRef.innerHTML += powers + "<br/>";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" size="5" id="inp">
+    <button type="button" onclick="exponents()">Let's see!</button>
+    <div id="output"></div>
+</body>
+
+</html>
