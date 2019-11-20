@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Windchill</title>
+        <script>
+        function doInputOutput() {
+        var tempF = parseFloat(document.getElementById('temp').value);
+        var speed = parseFloat(document.getElementById('windSpeed').value);
+        var wind = windChill(tempF, speed);
+        document.getElementById('output').innerHTML = wind;
+        }
+        function windChill(tempF, speed) {
+        var a = 35.74 + (0.6215 * tempF);
+        var b = 35.75 * (speed ** .16);
+        var c = .4275 * tempF * (speed ** .16);
+        var f = a - b + c;
+        return f;
+        }
+
+        </script>
+    </head>
+    <body>
+        <p>
+            What is the windchill today?
+            Temperature:<input type="text" size="5" id="temp">
+            Wind speed:<input type="text" size="5" id="windSpeed">
+        </p>
+        <button type="button" onclick="doInputOutput()">Let's See!</button>
+        <div id="output"></div>
+    </body>
+</html>
