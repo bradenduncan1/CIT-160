@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Add Ends</title>
+        <script>
+            var list = [ 17, 8, 9, 5, 20 ];
+
+            function display() {
+                value = addEnds(list);
+                document.getElementById('output').innerHTML = value;
+            }
+            function addEnds(list) {
+                //input is the list
+                //processing is adding the end numbers
+                //output is the sum of those numbers
+               var sum = list[0] + list[list.length-1];
+               return sum;
+            }
+
+        </script>
+    </head>
+    <body>
+        <button type="button" onclick="display()">Add ends!</button>
+        <div id="output"></div>
+    </body>
+</html>
