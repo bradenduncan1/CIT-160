@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Multiply Arrays</title>
+    <script>
+        var list = [-4, 3, 2.1, 6];
+        var multiplier = 2;
+        // process by multiplying each list number by the multiplier
+        //output array of products
+
+        function display() {
+            var products = multiply(list, 2);
+            document.getElementById('output').innerHTML = products;
+        }
+
+        function multiply(list, multiplier) {
+            var i;
+            var solve = [];
+            var solution;
+            for (i = 0; i < list.length; i++) {
+                solve += list[i] * multiplier + " ";
+            }
+            return solve;
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="display()">Multiply!</button>
+    <div id="output"></div>
+</body>
+
+</html>
